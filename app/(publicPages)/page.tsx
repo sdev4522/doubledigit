@@ -14,7 +14,6 @@ import { VideoIcon, CalendarIcon } from "lucide-react";
 import Image from "next/image";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { Testimonials } from "@/components/testimonials";
-import MagicBento from "@/components/MagicBento";
 import { ContactModel } from "@/components/contact-model";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
@@ -30,7 +29,7 @@ export default function Page() {
       <Header onOpenDialog={() => setOpen(true)} />
       <ContactModel open={open} onOpenChange={setOpen} />
       {/* ─── Hero Section ─── */}
-      <Hero onOpenDialog={() => setOpen(true)}/>
+      <Hero onOpenDialog={() => setOpen(true)} />
 
       {/* ─── Magic Bento Grid ─── */}
       {/* <div>

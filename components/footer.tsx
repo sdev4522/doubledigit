@@ -4,7 +4,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const cn = (...classes) => classes.filter(Boolean).join(" ");
+const cn = (...classes: (string | undefined)[]) =>
+  classes.filter(Boolean).join(" ");
 // ─── Config ───────────────────────────────────────────────────────────────────
 
 const NAV_COLS = [
@@ -83,7 +84,7 @@ function NewsletterInput() {
   const [status, setStatus] = useState("idle");
   const [focused, setFocused] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!email) return;
     setStatus("loading");
@@ -206,7 +207,8 @@ export function Footer() {
             </Link>
 
             <p className="max-w-[220px] text-sm leading-relaxed hover:text-slate-600 dark:hover:text-slate-300 transition-colors duration-200">
-              We build AI-powered automations, custom agents, and voice AI systems that transform how businesses operate.
+              We build AI-powered automations, custom agents, and voice AI
+              systems that transform how businesses operate.
             </p>
 
             {/* Socials */}

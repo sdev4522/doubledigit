@@ -167,7 +167,7 @@ function AgentVisual() {
           className={`px-3 py-1.5 rounded-lg text-[10px] max-w-[160px] ${msg.align === "right" ? "bg-[#6A6DE9]/20 text-[#A78BFA] self-end mr-2" : "bg-white/10 text-slate-300 self-start ml-2"}`}
           initial={{ opacity: 0, y: 10, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ delay: msg.delay, duration: 0.4 }}
+          transition={{ delay: msg.delay, duration: 0.4 } as any}
         >
           {msg.text}
         </motion.div>
@@ -216,7 +216,7 @@ const cardVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as any },
   },
 };
 

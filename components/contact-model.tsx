@@ -207,7 +207,6 @@ export function ContactModel({ open, onOpenChange }: ContactModelProps) {
                       disabled={(d) =>
                         d < new Date() || d.getDay() === 0 || d.getDay() === 6
                       }
-                      initialFocus
                     />
                   </PopoverContent>
                 </Popover>

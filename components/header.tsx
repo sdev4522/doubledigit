@@ -46,7 +46,13 @@ function Logo() {
   );
 }
 
-function NavLink({ href, children, onClick }) {
+interface NavLinkProps {
+  href: string;
+  children: React.ReactNode;
+  onClick?: () => void; // '?' ka matlab hai ki ye optional hai
+}
+
+function NavLink({ href, children, onClick }: NavLinkProps) {
   return (
     <motion.a
       href={href}
@@ -66,7 +72,7 @@ function NavLink({ href, children, onClick }) {
   );
 }
 
-function MenuIcon({ open }) {
+function MenuIcon({ open }: { open: boolean }) {
   return (
     <div className="relative flex h-5 w-5 flex-col items-center justify-center gap-[5px]">
       <motion.span
