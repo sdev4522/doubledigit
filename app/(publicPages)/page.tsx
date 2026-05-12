@@ -30,11 +30,6 @@ export default function Page() {
       {/* ─── Hero Section ─── */}
       <Hero onOpenDialog={() => setOpen(true)} />
 
-      {/* ─── Magic Bento Grid ─── */}
-      {/* <div>
-        <MagicBento className="mx-auto" />
-      </div> */}
-
       {/* ─── Integration Logos Marquee ─── */}
       <LogoMarquee />
 
