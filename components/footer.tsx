@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
+import { useThemeContext } from "@/context/ThemeContext";
 
 const cn = (...classes: (string | undefined)[]) =>
   classes.filter(Boolean).join(" ");
@@ -166,8 +168,9 @@ function NewsletterInput() {
 
 export function Footer() {
   const year = new Date().getFullYear();
-  const AgencyName = "InfinexWeb";
+  const AgencyName = "Doubledigitai";
   const createdBy = "InfinexWeb";
+  const { theme } = useThemeContext();
 
   return (
     <footer className="relative overflow-hidden">
@@ -192,18 +195,19 @@ export function Footer() {
           <div className="flex flex-col gap-5">
             {/* Logo */}
             <Link href="/" className="flex w-fit items-center gap-3">
-              <div
-                className="flex h-9 w-9 items-center justify-center rounded-xl text-base font-black text-white"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #6A6DE9 0%, #A78BFA 100%)",
-                }}
-              >
-                I
-              </div>
-              <span className="text-base font-semibold text-white">
-                {AgencyName}
-              </span>
+              <Image
+                className="h-9 md:h-9.5 w-auto shrink-0"
+                src={
+                  theme === "dark"
+                    ? "/assets/logo.png"
+                    : "/assets/logo-dark.png"
+                }
+                alt="Logo"
+                width={140}
+                height={40}
+                priority
+                fetchPriority="high"
+              />{" "}
             </Link>
 
             <p className="max-w-[220px] text-sm leading-relaxed hover:text-slate-600 dark:hover:text-slate-300 transition-colors duration-200">

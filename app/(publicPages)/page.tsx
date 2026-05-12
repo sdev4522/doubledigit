@@ -11,7 +11,6 @@ import StatsSection from "@/sections/StatsSection";
 import LogoMarquee from "@/sections/LogoMarquee";
 import CTASection from "@/sections/CTASection";
 import { VideoIcon, CalendarIcon } from "lucide-react";
-import Image from "next/image";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { Testimonials } from "@/components/testimonials";
 import { ContactModel } from "@/components/contact-model";

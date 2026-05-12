@@ -27,14 +27,10 @@ function Logo() {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      <a href="https://prebuiltui.com?utm_source=landing">
+      <a href="/">
         <Image
           className="h-9 md:h-9.5 w-auto shrink-0"
-          src={
-            theme === "dark"
-              ? "/assets/logo-light.svg"
-              : "/assets/logo-dark.svg"
-          }
+          src={theme === "dark" ? "/assets/logo.png" : "/assets/logo-dark.png"}
           alt="Logo"
           width={140}
           height={40}

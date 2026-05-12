@@ -20,6 +20,10 @@ export const metadata = {
   title: "InfinexWeb — AI Automation Agency | n8n, AI Agents & Voice AI",
   description:
     "We build n8n workflow automations, custom AI agents, and voice AI systems that save your team 20+ hours per week. Book a free strategy call today.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/assets/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
